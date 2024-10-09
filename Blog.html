@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - GPS Legal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    el="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+</head>
+    <style>
+        .article-container {
+            width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .article-container h2 {
+            margin-top: 0;
+        }
+
+        .article-container p {
+            display: none;
+            color: #333;
+        }
+
+        .article-container.expanded {
+            padding: 40px;
+            background-color: #e4e4e4;
+        }
+
+        .article-container.expanded p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><img src="logo1.jpg" style="width: 130px; height: 130px;" alt="Image"></h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="introduction.html">Back to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Blog</h1>
+        <!-- Blog 1 -->
+        <div class="article-container" onclick="toggleArticle(this)">
+            <h2>Navigating the New Code on Wages in India</h2>
+            <div>
+                <p><strong>INTRODUCTION:</strong><br>
+                The recent enactment of the Code on Wages marks a significant reform in wage regulation across India. This comprehensive legislation aims to streamline and standardize the process of wage determination, impacting millions of workers across both organized and unorganized sectors.</p>
+            
+
+                <p><strong>THE STRUCTURE OF THE CODE ON WAGES</strong><br>
+                <strong>OVERVIEW OF THE LEGISLATION</strong><br>
+                The Code on Wages consolidates four previously existing labor laws into a single statute. This integration is designed to facilitate easier compliance and enforcement while extending the coverage to all employees irrespective of their wage ceiling and sector.</p>
+            
+
+                <p><strong>SALIENT FEATURES</strong><br>
+                <strong>BROAD COVERAGE:</strong> Extends protections and entitlements to all workers, making no distinctions based on wage ceilings.<br>
+                <strong>DECENTRALIZED WAGE DETERMINATION:</strong> Empowers state governments to set wages in specific domains like railways and mines, whereas the central government oversees other sectors.</p>
+            
+
+                <p><strong>WHO BENEFITS AND HOW</strong><br>
+                <strong>IMPACT ACROSS SECTORS</strong> The Code's inclusive approach means that even traditionally unprotected workers, like independent contractors, are now covered under its wage protection mechanisms.</p>
+            
+
+                <p><strong>KEY PROVISIONS</strong><br>
+                • Ensures a minimum wage across all sectors.<br>
+                • Streamlines the process for timely payment of wages.<br>
+                • Introduces penalties for non-compliance, enhancing enforcement.</p>
+                
+
+                <p><strong>CHALLENGES AND OPPORTUNITIES</strong><br>
+                While the Code on Wages promises enhanced wage security, the broad definition of 'employee' could lead to ambiguity in implementation. Stakeholders must navigate these complexities carefully to fully realize the benefits of the Code.</p>
+            
+                
+                <p><strong>CONCLUSION:</strong><br>
+                The Code on Wages is poised to transform the labor landscape in India, promising greater fairness and transparency in wage management. As implementation progresses, it will be crucial to monitor the outcomes and refine the processes to ensure that the objectives of the legislation are achieved.</p>
+            </div>
+            
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="article-container" onclick="toggleArticle(this)">
+            <h2>The Novartis Case: A Landmark Decision in Indian Patent Law</h2>
+            <p>
+                <strong>Introduction:</strong><br>
+                The Novartis case against India's patent office is a landmark legal battle that had far-reaching implications for the pharmaceutical industry and patent law in India. This blog explores the case details, its implications, and the precedent it set for future patent filings.<br><br>
+            
+                <strong>The Dispute's Origin</strong><br>
+                <strong>Novartis' Patent Application</strong><br>
+                Novartis sought patent protection in India for a new form of its cancer drug, Imatinib Mesylate, marketed as Glivec. The application was rejected based on India's stringent standards under Section 3(d) of the Patent Act, which prevents evergreening of drugs.<br><br>
+                
+                <strong>Supreme Court's Verdict</strong><br>
+                <strong>Analysis of Efficacy</strong><br>
+                The court ruled that Novartis failed to prove a significant enhancement in the therapeutic efficacy of the new form of the drug, which is a requirement under the Indian patent law to grant a patent on modifications of already known drugs.<br><br>
+                
+                <strong>Broader Implications</strong><br>
+                The verdict was praised for its role in keeping essential drugs affordable and accessible while ensuring that patent laws are not misused to extend monopolies on life-saving drugs.<br><br>
+                
+                <strong>Impact on Pharma and Legal Frameworks</strong><br>
+                <strong>Effects on the Pharmaceutical Industry</strong><br>
+                The ruling reassured the generic drug industry, as it upheld the barrier against unjustified patents and supported the production of affordable medication.<br>
+                <strong>Legal and Global Perspective</strong><br>
+                This case has been cited in global discussions about patent laws, public health, and access to medicine, influencing debates and policies in other jurisdictions as well.<br><br>
+                
+                <strong>Conclusion:</strong><br>
+                The Novartis case underscores the delicate balance between pharmaceutical innovation and public health. By setting a precedent for stringent scrutiny of patent applications, it ensures that only genuine innovations receive patent protection, supporting both technological advancement and access to affordable healthcare.
+            </p>
+            
+        </div>
+    </section>
+
+    <script>
+        function toggleArticle(article) {
+            article.classList.toggle('expanded');
+        }
+    </script>
+
+</body>
+</html>

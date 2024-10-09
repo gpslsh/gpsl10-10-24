@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  li {
+    font-family: "Cinzel";
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  header {
+    background: #006d5b;
+    height: fit-content;
+    padding: 0 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Using flex to layout logo and nav */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Align items vertically */
+  }
+  
+  header .logo h1 {
+    margin-bottom: 0; /* Remove bottom margin */
+    animation: slideIn 2s ease;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    gap: 2rem;
+    padding-right: 2rem; /* Padding to the right for spacing */
+  }
+  
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url("https://media.istockphoto.com/id/538203075/photo/close-up-of-law-reports.jpg?s=612x612&w=0&k=20&c=7NGIN6ALrjNowsxUlb2q8jjSjCDp5MMcOul8XfC5Nx4=")
+      no-repeat center center/cover;
+    display: flex;
+    background-size: 70% 600px;
+    background-color: #201f1f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #270101;
+    text-align: center;
+    padding: 0 2rem;
+    padding-top: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .content-box {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); /* White background with 50% opacity */
+    border-radius: 8px; /* Optional: rounded corners */
+    padding: 1rem;
+    margin-top: 9rem;
+    width: 80%; /* Adjust width as needed */
+    max-width: 500px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: adds shadow for depth */
+    text-align: center; /* Center text within the box */
+  }
+  
+  .btn {
+    background-color: #006d5b; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded button edges */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .hero {
+      background-color: transparent; /* Remove background color */
+      /* height: max-content; */
+      background-size: 100% 500px;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .btn {
+    display: inline-block;
+    background: rgb(113, 110, 111);
+    color: #270101;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #c00;
+  }
+  
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  #about,
+  #contact {
+    text-align: center;
+    font-size: smaller;
+  }
+  .sevrvices {
+    text-align: center;
+  }
+  
+  .services__header {
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: #e6e5e5;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 125px; /* Slightly smaller width for medium screens */
+      padding: 1.5rem; /* Slightly reduced padding */
+      font-size: x-small;
+    }
+  
+    .service-cards {
+      gap: 1rem;
+    }
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Existing styles omitted for brevity */
+  
+  /* Modal Styles */
+  .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(39, 39, 38, 0.7);
+    z-index: 1100;
+  }
+  
+  .modal-content {
+    background-color: #333535;
+    color: #f4f4f1;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    animation: slideIn 0.5s ease;
+    font-size: small;
+  }
+  .modal {
+    display: none; /* Start hidden and only show when needed */
+    position: fixed; /* Stay in place even when scrolling */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Dim the background */
+    z-index: 1050; /* Ensure it's on top of other content */
+  }
+  
+  .modal-content {
+    background-color: #333535;
+    margin: 15% auto; /* 15% from the top and centered horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* You can adjust this for different sizes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Optional: Responsive adjustments */
+  @media (max-width: 600px) {
+    .modal-content {
+      width: 90%; /* Smaller devices have a wider modal */
+      margin: 20% auto; /* Increase top margin on smaller devices */
+    }
+  }
+  
+  .modal-content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content .btn {
+    display: block;
+    margin: 0 auto;
+    background: #070707;
+    color: #f5f1f1;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background 0.5s ease;
+  }
+  
+  .modal-content .btn:hover {
+    background: #f3e16d;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0.5%;
+  }
+  
+  #partners {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  #partners h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .partner-card {
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+  }
+  
+  /* Media Query for smaller screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    #partners {
+      display: none;
+    }
+  }
+  
+  .partner-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .partner-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+  }
+  
+  .partner-card .title {
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .partner-card .location {
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  .partner-card .links a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .partner-card .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .partner-card .links {
+    margin-bottom: 1rem;
+  }
+  
+  /* glider css start */
+  
+  @media (min-width: 768px) {
+    .glider-contain {
+      display: none;
+    }
+  }
+  
+  .glider-contain {
+    position: relative;
+    width: 90%;
+    margin: auto;
+  }
+  
+  .glider img {
+    width: 100%;
+    display: block; /* Remove extra space below images */
+  }
+  
+  .glider-prev,
+  .glider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #eee;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .glider-prev {
+    left: 10px;
+  }
+  
+  .glider-next {
+    right: 10px;
+  }
+  
+  /* glider css end */
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  #about {
+    position: relative;
+    height: 200px; /* Adjust height as needed */
+    color: #fff;
+    overflow: hidden;
+  }
+  /* Display the active slide */
+  .active {
+    left: 0; /* Bring the active slide into view */
+  }
+  /* Other existing styles omitted for brevity */
+  /* General styles for article containers */
+  .article-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  /* Hidden by default; shown only when expanded */
+  .article-container p {
+    display: none;
+    color: #333;
+  }
+  
+  /* Expanded state styles */
+  .article-container.expanded {
+    padding: 40px;
+    background-color: #e4e4e4;
+  }
+  
+  /* Make paragraph visible in expanded state */
+  .article-container.expanded p {
+    display: block;
+  }
+  /* Base styles for navbar and hamburger icon */
+  /* Hamburger Menu Styles */
+  /* Basic styling for desktop first - No hamburger, white link colors */
+  .header {
+    background-color: #006d5b; /* Dark green background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar {
+    display: flex; /* Default display */
+    width: 100%; /* Full width */
+    justify-content: center; /* Center items for desktop */
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex; /* Horizontal list for desktop */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li {
+    padding: 10px 20px; /* Larger padding for desktop */
+  }
+  
+  .navbar ul li a {
+    color: white; /* White text for desktop */
+    text-decoration: none;
+    font-size: 16px; /* Appropriate size for desktop */
+  }
+  
+  /* Hamburger menu - only visible in mobile view */
+  .hamburger {
+    display: none; /* Hidden on desktop */
+    font-size: 30px; /* Larger icon size for visibility on mobile */
+    background: none;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger on mobile */
+    }
+  
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      background-color: rgba(220, 226, 223, 0.95); /* Light background */
+      display: none; /* Hidden by default */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
+      z-index: 50;
+      overflow-y: auto; /* Allow scrolling */
+    }
+  
+    .navbar.expanded {
+      display: flex; /* Display when expanded */
+    }
+  
+    .navbar ul {
+      flex-direction: column; /* Stack links vertically on mobile */
+    }
+  
+    .navbar ul li a {
+      color: black; /* Black text for readability on light background */
+      font-size: 20px; /* Larger font size for mobile */
+    }
+  }
+  
+  /* Ensure global styles do not interfere */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif; /* Ensures consistent font usage */
+  }
+  
+  .slideshow-container {
+    position: relative; /* Keeps the slideshow positioned relative to its normal position */
+    width: 100%; /* Full width of the container */
+    height: 500px; /* Fixed height */
+    margin: auto; /* Centers the slideshow if there's a specified width less than the screen size */
+    overflow: hidden; /* Prevents slides from displaying outside the container */
+  }
+  
+  .slide {
+    display: none; /* Hide all slides by default */
+    position: absolute; /* Absolute position to allow stacking on top of each other */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background-size: cover; /* Cover the whole slide area with the image */
+    background-position: center; /* Center the background image */
+  }
+  
+  .slide .content-box {
+    position: absolute;
+    bottom: 5%; /* Adjust based on your design */
+    left: 50%;
+    transform: translateX(-50%); /* Center the box horizontally */
+    width: 100%; /* Adjust the width as necessary */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: #000; /* Text color */
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds depth */
+  }
+  .slideshow {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+    width: 500%; /* Adjust based on the number of slides */
+  }
+  
+  .slide {
+    width: 100%; /* Ensures each slide is full container width */
+    flex: 0 0 100%; /* Prevents flexbox from shrinking or growing the slides */
+  }
+  
+  
+  /* Display the first slide by default to start the slideshow */
+  .slideshow .slide:first-child {
+    display: block;
+  }
+  
+  .control {
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  .pause {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+  
+  .dots-container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+  
+  /* Show the first slide by default */
+  .slideshow .slide:first-child {
+    display: block;
+  }
+  

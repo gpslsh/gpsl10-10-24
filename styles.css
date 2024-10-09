@@ -136,11 +136,11 @@
   section {
     padding: 4rem 2rem;
   }
-  
-  #about,
-#about_slide {
+  #about_slide {
   text-align: center;
 }
+  #about,
+
   #contact {
     text-align: center;
     font-size: smaller;
